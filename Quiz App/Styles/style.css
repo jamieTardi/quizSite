@@ -1,0 +1,103 @@
+@font-face {
+    font-family: retro;
+    src: url(/fonts/DEFTONE.ttf);
+    font-family: cool;
+    src: url(/fonts/introscriptr-h2base-webfont.woff);
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: cool, sans-serif;
+}
+
+:root {
+    /* Setting the background color depending on the situation */
+    --hue-neutral:200;
+    --hue-wrong: 0;
+    --hue-correct: 110;
+/* numbers represent the color */
+}
+
+body {
+    
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Images/pexels-photo-259915.jpeg);
+    
+}
+
+body.correct{
+    background-image: url(../Images/Blue\ Celebration\ Background\ celebration\ -\ background\ \ all\ design\ ....jpg);
+}
+
+body.wrong {
+    background-image: url(../Images/Blue\ Celebration\ Background\ celebration\ -\ background\ \ all\ design\ ....jpg);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 4px;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    margin: 20px 0;
+
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 6px;
+    box-shadow: 0 0 4px 1px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 500;
+    font-size: x-large;
+
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.btn.correct{
+    --hue: var(--hue-correct);
+    background-color: hsl(var(--hue), 100%, 40%);
+    color: black;
+}
+
+.btn.wrong{
+    --hue: var(--hue-wrong);
+    background-color: hsl(var(--hue), 100%, 40%);
+    
+}
+
+.start-btn, .next-btn {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none
+}
